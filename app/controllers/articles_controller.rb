@@ -19,9 +19,10 @@ class ArticlesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
 
     private
     def article_params
-      paarams.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body)
     end
 end
